@@ -130,3 +130,9 @@ coffee.name = ("モーニングブレンド")
 console.log(coffee.name);
 
 
+// プロパティの追加
+// 存在しないプロパティも追加できる
+
+coffee.barista = "shimotsu"
+
+console.log(coffee);
