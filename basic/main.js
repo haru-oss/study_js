@@ -55,34 +55,34 @@
 
 // この場合は、文字列として扱われる。
 
-const no=(3);
+// const no=(3);
 
-const st=("3.5");
+// const st=("3.5");
 
 
-console.log(no+st);
+// console.log(no+st);
 
 
 // ３＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃＃
 
 
 
-let clucresult;
+// let clucresult;
 
-clucresult= Number(st) + no;
-
-
-console.log(clucresult);
+// clucresult= Number(st) + no;
 
 
+// console.log(clucresult);
 
 
-clucresult= parseInt(st) + no;
-console.log(clucresult);
 
 
-clucresult= Number(st) + no;
-console.log(clucresult);
+// clucresult= parseInt(st) + no;
+// console.log(clucresult);
+
+
+// clucresult= Number(st) + no;
+// console.log(clucresult);
 
 // だが、Number（）を使用すれば、int型として扱うように設定ができる
 
@@ -91,10 +91,42 @@ console.log(clucresult);
 
 // 配列
 
-const array =["shimotsu","yuika","haruya","suzu","sachiko",4,14,23,50];
+// const array =["shimotsu","yuika","haruya","suzu","sachiko",4,14,23,50];
 
 
-console.log(array[0]);
+// console.log(array[0]);
 
 
-// 
+// // 
+
+
+// console.log("my first commit")
+
+
+
+
+// オブジェクト　
+
+const  coffee ={
+    name : "リッチブレンド",
+    price: "800",
+    good: true,
+    place: "コモディ",
+    
+};
+
+//キーとバリューのセット・・・・プロパティと呼ぶ
+
+
+// アクセス
+
+console.log(coffee.name);
+
+// 変更
+coffee.name = ("モーニングブレンド")
+
+// 変更後、
+
+console.log(coffee.name);
+
+
