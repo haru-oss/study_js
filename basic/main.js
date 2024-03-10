@@ -107,32 +107,54 @@
 
 // オブジェクト　
 
-const  coffee ={
-    name : "リッチブレンド",
-    price: "800",
-    good: true,
-    place: "コモディ",
+// const  coffee ={
+//     name : "リッチブレンド",
+//     price: "800",
+//     good: true,
+//     place: "コモディ",
     
-};
+// };
 
 //キーとバリューのセット・・・・プロパティと呼ぶ
 
 
 // アクセス
 
-console.log(coffee.name);
+// console.log(coffee.name);
 
-// 変更
-coffee.name = ("モーニングブレンド")
+// // 変更
+// coffee.name = ("モーニングブレンド")
 
-// 変更後、
+// // 変更後、
 
-console.log(coffee.name);
+// console.log(coffee.name);
 
 
 // プロパティの追加
 // 存在しないプロパティも追加できる
 
-coffee.barista = "shimotsu"
+// coffee.barista = "shimotsu"
 
-console.log(coffee);
+// console.log(coffee);
+
+// console.log(typeof(coffee));
+
+
+// function add(a,b) {
+//     console.log(a + b);
+// }
+
+// add(4,3);
+
+
+// return文の活用
+
+function add(a,b) {
+    return(a + b);
+}
+
+const one_year=add(6,6);
+
+console.log(one_year);
+
+
