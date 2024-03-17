@@ -63,55 +63,60 @@ setupQuiz();
 
 
 
+const $ButtonLength = $button.length
+let buttunIndex = 0 ;
 
 
-
-// ///////////////////////////////////////////////////////////////////    
-
-$button[0].addEventListener('click', (e) => {
-    if(correct === e.target.textContent){
-        window.alert("正解！")
-
-    }else {
-        window.alert("不正解！")
-
-    }
-
-})
-// ///////////////////////////////////////////////////////////////////    
-$button[1].addEventListener('click', (e) => {
-    if(correct === e.target.textContent){
-        window.alert("正解！")
-
-    }else {
-        window.alert("不正解！")
-
-    }
-
-})
-// ///////////////////////////////////////////////////////////////////    
-
-
-$button[2].addEventListener('click', (e) => {
-    if(correct === e.target.textContent){
-        window.alert("正解！")
-
-    }else { 
-        window.alert("不正解！")
-
-    }
-
-})
+while (buttunIndex < $ButtonLength) {
+    
+    $button[buttunIndex].addEventListener('click', (e) => {
+        if(correct === e.target.textContent){
+            window.alert("正解！")
+    
+        }else {
+            window.alert("不正解！")
+    
+        }
+    
+    })    
+    buttunIndex ++;
+};
 
 // ///////////////////////////////////////////////////////////////////    
+// ///////////////////////////////////////////////////////////////////    
+// $button[1].addEventListener('click', (e) => {
+//     if(correct === e.target.textContent){
+//         window.alert("正解！")
 
-$button[3].addEventListener('click', (e) => {
-    if(correct === e.target.textContent){
-        window.alert("正解！")
+//     }else {
+//         window.alert("不正解！")
 
-    }else {
-        window.alert("不正解！")
+//     }
 
-    }
+// })
+// // ///////////////////////////////////////////////////////////////////    
 
-})
+
+// $button[2].addEventListener('click', (e) => {
+//     if(correct === e.target.textContent){
+//         window.alert("正解！")
+
+//     }else { 
+//         window.alert("不正解！")
+
+//     }
+
+// })
+
+// // ///////////////////////////////////////////////////////////////////    
+
+// $button[3].addEventListener('click', (e) => {
+//     if(correct === e.target.textContent){
+//         window.alert("正解！")
+
+//     }else {
+//         window.alert("不正解！")
+
+//     }
+
+// })
