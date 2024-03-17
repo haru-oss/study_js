@@ -65,10 +65,11 @@ setupQuiz();
 
 
 
+
 // ///////////////////////////////////////////////////////////////////    
 
-$button[0].addEventListener('click', () => {
-    if(correct === $button[0].textContent){
+$button[0].addEventListener('click', (e) => {
+    if(correct === e.target.textContent){
         window.alert("正解！")
 
     }else {
@@ -78,8 +79,8 @@ $button[0].addEventListener('click', () => {
 
 })
 // ///////////////////////////////////////////////////////////////////    
-$button[1].addEventListener('click', () => {
-    if(correct === $button[1].textContent){
+$button[1].addEventListener('click', (e) => {
+    if(correct === e.target.textContent){
         window.alert("正解！")
 
     }else {
@@ -91,8 +92,8 @@ $button[1].addEventListener('click', () => {
 // ///////////////////////////////////////////////////////////////////    
 
 
-$button[2].addEventListener('click', () => {
-    if(correct === $button[2].textContent){
+$button[2].addEventListener('click', (e) => {
+    if(correct === e.target.textContent){
         window.alert("正解！")
 
     }else { 
@@ -104,8 +105,8 @@ $button[2].addEventListener('click', () => {
 
 // ///////////////////////////////////////////////////////////////////    
 
-$button[3].addEventListener('click', () => {
-    if(correct === $button[3].textContent){
+$button[3].addEventListener('click', (e) => {
+    if(correct === e.target.textContent){
         window.alert("正解！")
 
     }else {
