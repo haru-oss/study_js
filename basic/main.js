@@ -29,7 +29,9 @@ const quiz = [
 const quizlength = quiz.length;
 let quizIndex = 0 ;
 
+let score = 0 ;
 
+ 
 
 
 
@@ -72,6 +74,7 @@ setupQuiz();
 const clickHandler = (e) => {
     if(quiz[quizIndex].correct === e.target.textContent){
         window.alert("正解！");
+        score ++;
         
     }else {
         window.alert("不正解！");
@@ -84,6 +87,7 @@ const clickHandler = (e) => {
         setupQuiz();
 } else{
     window.alert('終了！');
+    window.alert("あなたの正解数は" + score + "/"+ quizlength +"です！")
     // 問題数がもうなかったらこちらを実行
 
 
@@ -104,4 +108,5 @@ while (buttunIndex < buttunLength) {
     })  
     buttunIndex ++;
 };
+
 
