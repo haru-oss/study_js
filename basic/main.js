@@ -1,31 +1,49 @@
+const quiz = [
+    {
+        question1:'ゲーム市場、最も売れたゲーム機はどれ？',
+        answers:["プレステ",
+                 "任天堂DS",
+                 "任天堂スイッチ",
+                 "ファミコン",],
+        correct:"任天堂DS",
+    },
+    {
+        question1:'糸井重里が企画に関わった、任天堂のゲームといえば？',
+        answers:["MOTHER2",
+                 "スーパーマリオブラザーズ３",
+                 "スーパードンキーコング",
+                 "星のカービィ",],
+        correct:"MOTHER2",
+    },
+    {
+        question1:'ファイナルファンタジーⅣの主人公の名前は？',
+        answers:["フリオニール",
+                 "クラウド",
+                 "ディーダ",
+                 "セシル",],
+        correct:"セシル",
 
-// 問題文
-const question1 = "ゲーム市場、最も売れたゲーム機は次のどれ" ;
-
-
-// 選択肢
-
-const answers = [
-    "プレステ",
-    "任天堂DS",
-    "任天堂スイッチ",
-    "ファミコン",
+    }
 ];
 
-// これの長さ
-// let AnsLength = (answers.length);
+const quizlength = quiz.length;
+let quizIndex = 0 ;
 
 
-// クイズの答え
 
-const correct = "任天堂DS" ;
+
+
+
+
+
+
+
+
+
+
 
 const $button = document.getElementsByTagName("button");
-
-
-
-
-
+let buttunLength = $button.length;
 // let AnsLength = (answers.length);
 
 
@@ -40,83 +58,50 @@ const $button = document.getElementsByTagName("button");
 
 // クイズの問題を選択していぎ
 const setupQuiz = () => {
-    document.getElementById("js-question").textContent = question1;
+    document.getElementById("js-question").textContent = quiz[quizIndex].question1;
     let buttunIndex = 0;
-    let buttunLength = $button.length;
     while(buttunIndex < buttunLength){
-        $button[buttunIndex].textContent = answers[buttunIndex];
+        $button[buttunIndex].textContent =quiz[quizIndex].answers[buttunIndex] ;
         buttunIndex++}
         }    
         
 setupQuiz();
 
 
-// let buttunLength = $button.length
-// let buttunIndex = 0;
-// while(buttunIndex < buttunLength){
+
+const clickHandler = (e) => {
+    if(quiz[quizIndex].correct === e.target.textContent){
+        window.alert("正解！");
+        
+    }else {
+        window.alert("不正解！");
+    }
     
-//     $button[buttunIndex].textContent = answers[buttunIndex];
-//     buttunIndex++;
+    quizIndex ++ ;
+    
+    if(quizIndex < quizlength){
+        // 問題数がまだあったらこちらを実行
+        setupQuiz();
+} else{
+    window.alert('終了！');
+    // 問題数がもうなかったらこちらを実行
 
-// }
+
+}
+
+};
 
 
 
-
-const $ButtonLength = $button.length
 let buttunIndex = 0 ;
 
 
-while (buttunIndex < $ButtonLength) {
+while (buttunIndex < buttunLength) {
     
     $button[buttunIndex].addEventListener('click', (e) => {
-        if(correct === e.target.textContent){
-            window.alert("正解！")
+        clickHandler(e)
     
-        }else {
-            window.alert("不正解！")
-    
-        }
-    
-    })    
+    })  
     buttunIndex ++;
 };
 
-// ///////////////////////////////////////////////////////////////////    
-// ///////////////////////////////////////////////////////////////////    
-// $button[1].addEventListener('click', (e) => {
-//     if(correct === e.target.textContent){
-//         window.alert("正解！")
-
-//     }else {
-//         window.alert("不正解！")
-
-//     }
-
-// })
-// // ///////////////////////////////////////////////////////////////////    
-
-
-// $button[2].addEventListener('click', (e) => {
-//     if(correct === e.target.textContent){
-//         window.alert("正解！")
-
-//     }else { 
-//         window.alert("不正解！")
-
-//     }
-
-// })
-
-// // ///////////////////////////////////////////////////////////////////    
-
-// $button[3].addEventListener('click', (e) => {
-//     if(correct === e.target.textContent){
-//         window.alert("正解！")
-
-//     }else {
-//         window.alert("不正解！")
-
-//     }
-
-// })
